@@ -1,0 +1,33 @@
+// Write a program to reverse an array or string
+
+class ABC {
+    public static void main(String[] args) {
+        int a[]={4, 5, 1, 2};
+        int temp;
+        for(int i=0;i<a.length/2;i++){
+            temp=a[i];
+            a[i]=a[a.length-i-1];
+            a[a.length-i-1]=temp;
+        }
+        for(int i=0;i<a.length;i++){
+        System.out.println(a[i]);
+        }
+    }
+}
+
+
+# for string reverse
+
+class ABC {
+    public static void main(String[] args) {
+        String a="Hello world";
+        StringBuilder string = new StringBuilder(a);
+        char temp;
+        for(int i=0;i<string.length()/2;i++){
+            temp=string.charAt(i);
+            string.setCharAt(i,string.charAt(string.length()-i-1));
+            string.setCharAt(string.length()-i-1,temp);
+        }
+        System.out.println(string);
+    }
+}
