@@ -1,0 +1,18 @@
+# Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo
+
+class Solution:
+    def sort012(self,a,n):
+        l=0
+        h=n-1
+        mid=0
+        while(mid<=h):
+            if(a[mid]==0):
+                a[mid],a[l]=a[l],a[mid]
+                mid+=1
+                l+=1
+            elif(a[mid]==1):    
+                mid+=1
+            else:
+                a[h],a[mid]=a[mid],a[h]
+                h-=1
+        return a      
