@@ -1,4 +1,25 @@
 // Write a program to reverse an array or string
+ # Python
+ 
+ 
+a=[6,5,4,3,2,1]
+for i in range(len(a)//2):
+    a[i],a[len(a)-i-1]=a[len(a)-i-1],a[i]
+print(a)    
+
+
+a="Hello world"
+a=[i for i in a]
+for i in range(len(a)//2):
+    a[i],a[len(a)-i-1]=a[len(a)-i-1],a[i]
+print(''.join(a))    
+
+
+
+====================================================================
+
+
+// Write a program to reverse an array or string
 
 class ABC {
     public static void main(String[] args) {
