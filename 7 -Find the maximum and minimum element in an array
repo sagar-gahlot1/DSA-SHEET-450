@@ -1,0 +1,14 @@
+class minmax:
+    def __int__(self):
+        self.a_min=0
+        self.a_max=0
+def getminmax(a):
+    ob=minmax()
+    ob.a_min=min(a)
+    ob.a_max=max(a)
+    return ob
+
+a=[2,4,8,9,2,12,45,3]
+t=getminmax(a)
+print("minimum: ",t.a_min)
+print("maximum",t.a_max)
