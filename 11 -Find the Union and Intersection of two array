@@ -1,0 +1,7 @@
+# Find the Union and Intersection of the two sorted arrays.
+
+def doUnion(self,a,n,b,m):
+        
+        a.extend(b)
+        c=set(a)
+        return len(c)
