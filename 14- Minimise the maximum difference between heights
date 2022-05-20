@@ -1,0 +1,15 @@
+# Minimise the maximum difference between heights 
+
+class Solution:
+    def getMinDiff(self, arr, n, k):
+        arr.sort()
+        smallest=arr[0]+k
+        largest=arr[n-1]-k
+        diff=max(arr)-min(arr)
+        for i in range(n-1):
+            max_=max(largest,arr[i]+k)
+            min_=min(smallest,arr[i+1]-k)
+            if(min_<0):
+                continue
+            diff=min(diff,max_-min_)
+        return diff  
