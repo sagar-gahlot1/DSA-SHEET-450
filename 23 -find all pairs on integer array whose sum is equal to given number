@@ -1,0 +1,21 @@
+#  find all pairs on integer array whose sum is equal to given number
+
+
+
+class Solution:
+    def getPairsCount(self, arr, n, k):
+        d={}
+        c=0
+        for i in range(0,n):
+            if(arr[i]>k):
+                continue
+            if(k-arr[i] in d.keys()):
+                c+=d[k-arr[i]]
+            
+            if (arr[i] in d.keys()):
+                d[arr[i]]+=1
+            else:
+                d[arr[i]]=1
+            
+        return c
+            
