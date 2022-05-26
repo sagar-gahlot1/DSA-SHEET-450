@@ -1,0 +1,9 @@
+class Solution:
+    def factorial(self, N):
+        
+        def fact(m):
+            if(m==1):
+                return 1
+            return m * fact(m-1)
+        k=fact(N)
+        return [k]  
