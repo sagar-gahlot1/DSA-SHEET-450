@@ -1,0 +1,18 @@
+from collections import Counter
+arr = [ 1, 1, 2, 2, 3, 5, 4, 2, 2, 3, 1, 1, 1 ]
+k=4
+x=len(arr)//k
+# ========================
+mp=Counter(arr)
+print(mp)
+for i in mp:
+    if(mp[i]>x):
+        print(i)
+# =========================        
+d={}        
+for i in arr:
+    d[i]=d.get(i,0)+1
+print(d)    
+for i in d.keys():
+    if(d[i]>x):
+        print(i)
