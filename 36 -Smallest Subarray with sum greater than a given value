@@ -1,0 +1,24 @@
+#   Smallest Subarray with sum greater than a given value
+
+class Solution:
+    def smallestSubWithSum(self, a, n, x):
+        curr_sum=0
+        start=0
+        end=0
+        min_len=n-1
+        curr_sum+=a[end]
+        if(n==1):
+            if(x<a[0]):
+                return 1
+            return 0    
+        while(start!=n):
+            if(x<curr_sum):
+                min_len=min(min_len,end-start+1)
+                curr_sum-=a[start]
+                start+=1
+                continue
+            if(end==n-1):
+                break
+            end+=1
+            curr_sum+=a[end]
+        return min_len
