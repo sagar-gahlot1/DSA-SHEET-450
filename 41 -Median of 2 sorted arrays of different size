@@ -1,0 +1,27 @@
+# Median of 2 sorted arrays of different size
+
+ar1 = [-5, 3, 6, 12, 15]
+ar2 = [-12, -10, -6, -3, 4, 10]
+n1 = len(ar1)
+n2 = len(ar2)
+a=[]
+i=0
+j=0
+while(i<n1 and j<n2):
+    if(ar1[i]<=ar2[j]):
+        a.append(ar1[i])
+        i+=1
+    else:
+        a.append(ar2[j])
+        j+=1
+if(n1!=i):
+    a.extend(ar1[i:])
+elif(n2!=j):
+    a.extend(ar2[j:])
+else:
+    pass
+print(a)
+if(len(a)%2==0):
+    print((a[len(a)//2-1]+a[len(a)//2])//2)
+else:
+    print(a[len(a)//2])
